@@ -1,0 +1,19 @@
+{
+  "name": "cuyana-online-book-portal",
+  "version": "1.0.0",
+  "description": "Cuyana home test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nidhi2402/cuyana-home-test.git"
+  },
+  "author": "Nidhi Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nidhi2402/cuyana-home-test/issues"
+  },
+  "homepage": "https://github.com/Nidhi2402/cuyana-home-test#readme"
+}
