@@ -1,40 +1,93 @@
+body {
+    margin: 0px;
+}
 .header-nav{
     width: 375px;
     height: 72px;
 }
 .hamburger-icon span {
     display: block;
-    width: 35px;
-    height: 5px;
+    width: 31.9px;
+    height: 4px;
     background-color: black;
-    margin: 6px 0;
+    margin: 5px 0;
   }
   .hamburger-icon{
     position: absolute;
     float: left;
     right: 16.2px;
     top: 23.02px;
+    height: 26.77px;
+    vertical-align: middle;
   }
   .header {
     display: inline-block;
     width: 102px;
     height: 50px;
     top: 11px;
-    left: 16px;
+    margin: 11px 16px;
     bottom: 11px;
-    font-family: 'Helvetica';
+    font-family: Helvetica;
+    color: #333333;
   }
   .header-icon_1{
       font-size: 33px;
       position: absolute; 
+      height: 33px;
   }
   .header-icon_2{
     position: absolute;
     top: 45px;
-    font-size: 16px; 
+    height: 16px;
+    font-size: 16px;
 }
-.image-flyout {
+.image-flyout img {
     width: 377px;
     height: 251px;
 }
-  
+.image-text {
+    position: absolute;
+    top: 258px;
+    width: 343px;
+    height: 208px;
+    font-size: 20px;
+    margin: 0px 16px;
+    text-align: left;
+    font-family: Helvetica Neue;
+    background-color: rgba(0,0,0,64%);
+    border-color: #707070;
+    color: #FFFFFF;  
+}
+.image-text h4 {
+    display: inline-block;
+    margin: 10px 18px;
+    font-weight: normal;
+}
+.image-text p {
+    margin: 11px 18px;
+}
+.image-text a {
+    margin-bottom: 17px;
+    margin-left: 20px;
+    color: inherit;
+    font-weight: normal;
+}
+.footer {
+   clear: both;
+   position: absolute;
+   bottom: 35.27px;
+   margin-left: 16px;
+}
+.footer-banner {
+    font-size: 3.7vw;
+    text-align: left;
+    width: 100px;
+    font-family: Verdana;
+}
+.footer-copyright {
+    display: inline-block;
+    font-size: 2.9vw;
+    font-family: Hiragino Kaku Gothic ProN;
+    width: 200px;
+    text-align: left;
+}
