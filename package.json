@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean:lib": "rm -rf lib",
-    "build": "babel src -d lib",
-    "test": "npm test"
+    "build": "webpack",
+    "test": "npm test",
+    "start": "webpack-dev-server --content-base index.html"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
     "@babel/plugin-transform-classes": "^7.5.5",
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@babel/preset-env": "^7.5.5",
-    "jest": "24.8.0"
+    "jest": "24.8.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }

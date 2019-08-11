@@ -1,5 +1,4 @@
-//import ProductTile from "./components/product-item";
-//import * as data from "./../src/__mock-data__/books.json";
+import ProductTile from "./components/product-item";
 
 window.onload = (data) =>{
     _init();
@@ -7,8 +6,7 @@ window.onload = (data) =>{
 
 const _init = () => {
     _getTheData('src/__mock-data__/books.json',(response)=>{
-        console.log(response);
-        //_renderProducts(data);  
+        _renderProducts(response);  
     });
 };
 const _getTheData = (url,callback) => {
@@ -17,26 +15,27 @@ const _getTheData = (url,callback) => {
         xobj.open('GET', url, true); // Replace 'my_data' with the path to your file
         xobj.onreadystatechange = function () {
               if (xobj.readyState == 4 && xobj.status == "200") {
-                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                console.log('responseText:' + xobj.responseText);
                 try {
                     var data = JSON.parse(xobj.responseText);
                 } catch(err) {
                     console.log(err.message + " in " + xobj.responseText);
                     return;
                 }
-                callback(xobj.responseText);
+                callback(data);
               }
         };
         xobj.send();   
 };
 const _renderTileUsingJson = (products) => {
+    const productListDiv = document.querySelector(".product-list-display");
     const ul = document.createElement("ul");
     ul.classList.add("product-list");
-    // products.forEach(product => {
-    //     let productTile = new ProductTile();
-    //     productTile.renderProductTitle(ul,product);
-    // });
+    for (let book in products) {
+        let productTile = new ProductTile();
+        productTile.renderProductTitle(ul,products[book]); 
+            console.log("output: " + products[book]["title"]);
+        }
+        productListDiv.appendChild(ul);
 };
 
 const _renderProducts = (jsonResponse) => {

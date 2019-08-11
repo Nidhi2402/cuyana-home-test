@@ -94,3 +94,38 @@ body {
 .footer-image {
     display: inline-block;
 }
+.product-list-display {
+    display: block;
+    flex-wrap: unset;
+}
+.product-list-display .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding: 0;
+    list-style: none;
+}
+.product-list-display .product-list .product-cell {
+    flex: 0 0 50%;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: auto;
+}
+.product-list-display .product-thumb {
+    background-color: #707070;
+    height: 170px;
+    width: 170px;
+}
+ul.product-list li>* {
+    display: block;
+    max-width: 100%;
+}
+.tool-.toolbox-for-product-cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
