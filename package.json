@@ -4,6 +4,8 @@
   "description": "Cuyana home test project",
   "main": "index.js",
   "scripts": {
+    "clean:lib": "rm -rf lib",
+    "build": "babel src -d lib",
     "test": "npm test"
   },
   "repository": {
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/Nidhi2402/cuyana-home-test/issues"
   },
-  "homepage": "https://github.com/Nidhi2402/cuyana-home-test#readme"
+  "homepage": "https://github.com/Nidhi2402/cuyana-home-test#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-classes": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/preset-env": "^7.5.5",
+    "jest": "24.8.0"
+  }
 }
