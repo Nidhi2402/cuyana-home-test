@@ -41,6 +41,9 @@ body {
     height: 16px;
     font-size: 16px;
 }
+.image-flyout {
+    height: 394px;;
+}
 .image-flyout img {
     width: 377px;
     height: 251px;
@@ -74,7 +77,6 @@ body {
 }
 .footer {
    clear: both;
-   position: absolute;
    bottom: 35.27px;
    margin-left: 16px;
 }
@@ -97,35 +99,91 @@ body {
 .product-list-display {
     display: block;
     flex-wrap: unset;
+    margin-left: 0;
+    margin-top: 21.5px
 }
 .product-list-display .product-list {
     display: flex;
     flex-wrap: wrap;
     overflow: visible;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 .product-list-display .product-list .product-cell {
-    flex: 0 0 50%;
-    margin-right: 0;
-    margin-bottom: 5px;
-    margin-left: 0;
+    /* flex: 0 0 45%;
+    margin: 0px 0px 5px 0px;
     overflow: hidden;
-    padding: 0px;
+    padding: 4px;
     position: relative;
-    width: auto;
+    width: auto; */
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    padding: 4px;
+    width: 50%;
+    margin-bottom: 0;
+}
+.product-list>li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    padding: 4px;
+    width: 50%;
+    margin-bottom: 0;
 }
 .product-list-display .product-thumb {
-    background-color: #707070;
-    height: 170px;
-    width: 170px;
+    background-color: #f2f2f2;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
 ul.product-list li>* {
     display: block;
     max-width: 100%;
 }
-.tool-.toolbox-for-product-cell {
+.toolbox-for-product-cell {
     position: relative;
     width: 100%;
     height: 100%;
+}
+.toolbox-for-product-cell > a {
+    border: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.product-list-display .product-thumb .toolbox-for-product-cell img {
+    width: 100%;
+    padding: 0;
+    display: block;
+    height: 170px;
+    width: 170px;
+}
+.product-list .product-cell .product-detail > a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    cursor: pointer;
+}
+@media screen and (min-width: 439px) {
+    .product-list .product-cell {
+        flex:0 0 33.3333%
+    }
+}
+
+@media screen and (min-width: 659px) {
+    product-list .product-cell {
+        flex:0 0 25%
+    }
+}
+
+@media screen and (min-width: 879px) {
+    .product-list .product-cell {
+        flex:0 0 20%
+    }
 }

@@ -33,7 +33,6 @@ const _renderTileUsingJson = (products) => {
     for (let book in products) {
         let productTile = new ProductTile();
         productTile.renderProductTitle(ul,products[book]); 
-            console.log("output: " + products[book]["title"]);
         }
         productListDiv.appendChild(ul);
 };

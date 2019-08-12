@@ -4,10 +4,10 @@
   "description": "Cuyana home test project",
   "main": "index.js",
   "scripts": {
-    "clean:lib": "rm -rf lib",
+    "clean": "rm -rf dist",
     "build": "webpack",
     "test": "npm test",
-    "start": "webpack-dev-server --content-base index.html"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",

@@ -24,6 +24,13 @@ export default class ProductTile extends HTMLElement {
         productTile.appendChild(productThumb);
         productTile.appendChild(prodcutDetail);
 
+        // Now create the elements for Product(Books) details
+        let productTitle = document.createElement("a");
+        productTitle.href = prodcutDetails["link"];
+        productTitle.classList.add("product-name");
+        productTitle.innerHTML = prodcutDetails["title"];
+        prodcutDetail.appendChild(productTitle);
+
         productContainer.appendChild(productTile)
     }
 }
