@@ -128,6 +128,7 @@ body {
     position: relative;
     width: 100%;
     height: 75%;
+    border: 1px solid brown;
 }
 ul.product-list li>* {
     display: block;
@@ -148,6 +149,9 @@ ul.product-list li>* {
     width: 100%;
     height: 100%;
 }
+.product-list .product-cell {
+    background: #F6F5E4;
+}
 .product-list .product-cell .product-detail > a {
     text-decoration: none;
     color: black;
@@ -158,10 +162,14 @@ ul.product-list li>* {
     font-family: Verdana;
     font-size: 14px;
     margin: 0 0 5px;
+    text-align: center;
 }
 .product-cell .product-detail .author-name {
     display: block;
-}  
+} 
+.author-name {
+    color: brown;
+} 
   @media screen and (min-width: 647px) {
     .image-text {
         top: 25%;
