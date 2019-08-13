@@ -9,18 +9,14 @@ export default class ProductTile extends HTMLElement {
         let prodcutDetail = document.createElement("div");
         prodcutDetail.classList.add("product-detail");
 
-        let toolboxCell = document.createElement("div");
-        toolboxCell.classList.add("toolbox-for-product-cell");
-
         let productImage = document.createElement("img");
-        productImage.classList.add("product-thumb");
+        productImage.classList.add("product-image");
         productImage.src = prodcutDetails["imageLink"];
 
         let productWikiLink = document.createElement("a");
         productWikiLink.href = prodcutDetails["link"];
         productWikiLink.appendChild(productImage);
-        toolboxCell.appendChild(productWikiLink);
-        productThumb.appendChild(toolboxCell);
+        productThumb.appendChild(productWikiLink);
         productTile.appendChild(productThumb);
         productTile.appendChild(prodcutDetail);
 
@@ -30,6 +26,14 @@ export default class ProductTile extends HTMLElement {
         productTitle.classList.add("product-name");
         productTitle.innerHTML = prodcutDetails["title"];
         prodcutDetail.appendChild(productTitle);
+        let authorName = document.createElement("span");
+        authorName.classList.add("author-name");
+        authorName.innerHTML = prodcutDetails["author"];
+        prodcutDetail.appendChild(authorName);
+        let languageOfBook = document.createElement("span");
+        languageOfBook.classList.add("language-of-book");
+        languageOfBook.innerHTML = `Language: ${prodcutDetails["language"]}`;
+        prodcutDetail.appendChild(languageOfBook);
 
         productContainer.appendChild(productTile)
     }
